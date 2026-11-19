@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>花样 Pattern Mill — 工业遗产构件的纹样工具链</title>
+    <meta
+      name="description"
+      content="一张老厂房构件的照片进去，一套能上机的纹样出来：周期与对称群被量出来、单元被规范成矢量、平铺无缝、按工业色板再生、贴到产品上。"
+    />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23f3efe6'/%3E%3Crect x='6' y='6' width='20' height='20' fill='none' stroke='%231b1a17' stroke-width='2'/%3E%3Crect x='12' y='12' width='8' height='8' fill='%238c3a2b'/%3E%3C/svg%3E" />
+    <script type="module" crossorigin src="./assets/index-DYNz4vcH.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-DxKtTnKy.css">
+  </head>
+  <body>
+    <header class="masthead">
+      <div class="brand">
+        <span class="mark" aria-hidden="true"></span>
+        <h1>花样</h1>
+        <span class="latin">Pattern&nbsp;Mill</span>
+      </div>
+      <p class="tagline">一张老构件的照片进去，一套能上机的纹样出来。</p>
+      <div class="meta">
+        <span>工业文化创新发展大赛 · 2026 人工智能未来设计赛</span>
+        <span class="sep">/</span>
+        <span>OPC 创新创业方向 · AI+软件</span>
+      </div>
+    </header>
+
+    <main class="bench">
+      <aside class="library" aria-label="构件库">
+        <div class="panel-head">
+          <h2>构件库</h2>
+          <span class="count" id="libCount">—</span>
+        </div>
+        <div class="cards" id="cards"></div>
+        <label class="upload">
+          <input type="file" id="file" accept="image/*" hidden />
+          <span class="upload-icon" aria-hidden="true">＋</span>
+          <span>上传自己的构件</span>
+          <small>照片、扫描件都行；别超过 4000 px</small>
+        </label>
+      </aside>
+
+      <section class="stage" aria-label="工作台">
+        <div class="stage-head">
+          <div class="spec-id">
+            <span class="no" id="specNo">No. —</span>
+            <span class="name" id="specName">未选构件</span>
+          </div>
+          <div class="views" role="tablist" aria-label="视图">
+            <button role="tab" data-view="source" aria-selected="true">原图</button>
+            <button role="tab" data-view="grid" aria-selected="false">周期</button>
+            <button role="tab" data-view="unit" aria-selected="false">单元</button>
+            <button role="tab" data-view="tile" aria-selected="false">平铺</button>
+            <button role="tab" data-view="poster" aria-selected="false">分色</button>
+          </div>
+        </div>
+
+        <div class="canvas-wrap" id="canvasWrap">
+          <canvas id="stage" width="900" height="620"></canvas>
+          <div class="scanning" id="scanning" hidden>
+            <div class="scan-line"></div>
+            <span class="scan-label">正在量周期</span>
+          </div>
+          <div class="empty" id="empty">
+            <p>选一个构件开始</p>
+            <small>或者把照片拖进来</small>
+          </div>
+        </div>
+
+        <div class="tools">
+          <button id="toggleGrid" class="chip" aria-pressed="true">周期网格</button>
+          <button id="toggleAxis" class="chip" aria-pressed="true">对称轴</button>
+          <span class="hint" id="hint">青色线是量出来的周期，红色虚线是对称轴。</span>
+        </div>
+      </section>
+
+      <aside class="readout" aria-label="检验单">
+        <div class="panel-head">
+          <h2>检验单</h2>
+          <span class="stamp" id="stamp">待检</span>
+        </div>
+
+        <dl class="sheet" id="sheet">
+          <div><dt>周期 X</dt><dd id="rPx">—</dd></div>
+          <div><dt>周期 Y</dt><dd id="rPy">—</dd></div>
+          <div><dt>置信</dt><dd id="rConf">—</dd></div>
+          <div><dt>对称群</dt><dd id="rGroup">—</dd></div>
+          <div><dt>接缝</dt><dd id="rSeam">—</dd></div>
+          <div><dt>分色</dt><dd id="rColors">—</dd></div>
+        </dl>
+
+        <div class="sect">
+          <h3>色板</h3>
+          <div class="palettes" id="palettes"></div>
+        </div>
+
+        <div class="sect">
+          <h3>导出</h3>
+          <div class="exports">
+            <button id="exSvg" class="btn">SVG 单元</button>
+            <button id="exPng" class="btn">PNG 平铺</button>
+            <button id="exSpec" class="btn">规格书</button>
+          </div>
+          <p class="foot" id="foot">全部在本地算完，不上传任何图片。</p>
+        </div>
+      </aside>
+    </main>
+
+    <footer class="colophon">
+      <span>花样 Pattern Mill · v1.0</span>
+      <span>周期用归一化互相关测，对称群是工程近似判定，接缝靠 6% 羽化压平。</span>
+    </footer>
+
+  </body>
+</html>
