@@ -1,0 +1,74 @@
+[
+  {
+    "id": "lattice-48",
+    "file": "lattice-48.png",
+    "note": "混凝土花格窗，回字纹",
+    "w": 480,
+    "h": 360,
+    "truth": {
+      "px": 48,
+      "py": 48,
+      "group": "p4m"
+    }
+  },
+  {
+    "id": "brick-64x32",
+    "file": "brick-64x32.png",
+    "note": "错缝砖墙（垂直要两行才重复）",
+    "w": 480,
+    "h": 360,
+    "truth": {
+      "px": 64,
+      "py": 64,
+      "group": "pg"
+    }
+  },
+  {
+    "id": "railing-24x60",
+    "file": "railing-24x60.png",
+    "note": "铸铁栏杆",
+    "w": 480,
+    "h": 360,
+    "truth": {
+      "px": 24,
+      "py": 60,
+      "group": "pm"
+    }
+  },
+  {
+    "id": "louver-40x20",
+    "file": "louver-40x20.png",
+    "note": "通风百叶",
+    "w": 480,
+    "h": 360,
+    "truth": {
+      "px": 40,
+      "py": 20,
+      "group": "pm"
+    }
+  },
+  {
+    "id": "noise",
+    "file": "noise.png",
+    "note": "无周期（对照）",
+    "w": 480,
+    "h": 360,
+    "truth": {
+      "px": null,
+      "py": null,
+      "group": "p1"
+    }
+  },
+  {
+    "id": "enamel-sign",
+    "file": "enamel-sign.png",
+    "note": "搪瓷招牌（无重复）",
+    "w": 480,
+    "h": 360,
+    "truth": {
+      "px": null,
+      "py": null,
+      "group": "p1"
+    }
+  }
+]

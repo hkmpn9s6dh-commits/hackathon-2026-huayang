@@ -1,0 +1,102 @@
+
+[1] 周期检测（真值由合成脚本写死，算法只准测出它）
+  ✓ lattice-48 水平周期 = 48  测得 48.00（置信 1.00）
+  ✓ lattice-48 垂直周期 = 48  测得 48.00（置信 1.00）
+  ✓ brick-64x32 水平周期 = 64  测得 64.00（置信 0.94）
+  ✓ brick-64x32 垂直周期 = 64  测得 64.00（置信 0.94）
+  ✓ railing-24x60 水平周期 = 24  测得 24.00（置信 1.00）
+  ✓ railing-24x60 垂直周期 = 60  测得 60.00（置信 1.00）
+  ✓ louver-40x20 水平周期 = 40  测得 40.00（置信 0.99）
+  ✓ louver-40x20 垂直周期 = 20  测得 20.00（置信 0.99）
+  ✓ noise 不误报高置信周期  置信 0.01/0.01
+  ✓ enamel-sign 不误报高置信周期  置信 0.83/0.64
+
+[2] 对称群（工程近似；只断言方向确定的那几项）
+  ✓ lattice 四重对称 → p4m  测得 p4m
+  ✓ lattice 水平镜像得分 ≥ 0.9  0.987
+  ✓ brick 有平移周期（非 p1）  group=p4m
+  ✓ brick 单元自身可辨（有镜像或旋转）  group=p4m
+  ✓ railing 有镜像（pm 及以上）  group=pmm
+  ✓ noise 不误判为高对称  测得 p1（近对称）
+  ✓ enamel 不误判为四重对称  测得 pm
+
+[3] 无缝化：接缝差 ≤ 内部相邻列差中位数 × 1.5
+  ✓ lattice-48 接缝差 ≤ 内部相邻列差中位数 × 1.5  比值 0.00
+  ✓ lattice-48 单元尺寸取整正确  48×48
+  ✓ lattice-48 单元可编码为 PNG  2 KB
+  ✓ brick-64x32 接缝差 ≤ 内部相邻列差中位数 × 1.5  比值 0.00
+  ✓ brick-64x32 单元尺寸取整正确  64×64
+  ✓ brick-64x32 单元可编码为 PNG  4 KB
+  ✓ railing-24x60 接缝差 ≤ 内部相邻列差中位数 × 1.5  比值 0.00
+  ✓ railing-24x60 单元尺寸取整正确  24×60
+  ✓ railing-24x60 单元可编码为 PNG  1 KB
+  ✓ louver-40x20 接缝差 ≤ 内部相邻列差中位数 × 1.5  比值 0.00
+  ✓ louver-40x20 单元尺寸取整正确  40×20
+  ✓ louver-40x20 单元可编码为 PNG  1 KB
+
+[4] 矢量化：SVG 可解析、路径非空、颜色数 ≤ k
+  ✓ lattice-48 路径数 > 0  598 条
+  ✓ lattice-48 颜色数 ≤ 5  5 色
+  ✓ lattice-48 SVG 头正确
+  ✓ lattice-48 viewBox 与单元一致  48×48
+  ✓ lattice-48 path 元素数与统计一致  dom=5 colors=5
+  ✓ lattice-48 色值合法  #433f39 #48443e #aca89f #b0aca3 #b3afa6
+  ✓ brick-64x32 路径数 > 0  594 条
+  ✓ brick-64x32 颜色数 ≤ 5  5 色
+  ✓ brick-64x32 SVG 头正确
+  ✓ brick-64x32 viewBox 与单元一致  64×64
+  ✓ brick-64x32 path 元素数与统计一致  dom=5 colors=5
+  ✓ brick-64x32 色值合法  #765c4e #7d6355 #917563 #92887e #988e84
+  ✓ railing-24x60 路径数 > 0  188 条
+  ✓ railing-24x60 颜色数 ≤ 5  5 色
+  ✓ railing-24x60 SVG 头正确
+  ✓ railing-24x60 viewBox 与单元一致  24×60
+  ✓ railing-24x60 path 元素数与统计一致  dom=5 colors=5
+  ✓ railing-24x60 色值合法  #2f2d2b #383633 #464440 #cfcdc7 #d4d2cc
+  ✓ louver-40x20 路径数 > 0  68 条
+  ✓ louver-40x20 颜色数 ≤ 5  5 色
+  ✓ louver-40x20 SVG 头正确
+  ✓ louver-40x20 viewBox 与单元一致  40×20
+  ✓ louver-40x20 path 元素数与统计一致  dom=5 colors=5
+  ✓ louver-40x20 色值合法  #313335 #37393b #606264 #939597 #989a9c
+
+[5] 换色：明度结构保真 ≥ 0.90
+  ✓ lattice-48 × 锈红 结构保真  0.971
+  ✓ lattice-48 × 铸铁灰 结构保真  0.981
+  ✓ lattice-48 × 搪瓷蓝 结构保真  0.972
+  ✓ lattice-48 × 水磨石米 结构保真  0.980
+  ✓ lattice-48 × 警示黄 结构保真  0.988
+  ✓ lattice-48 × 铜绿 结构保真  0.985
+  ✓ brick-64x32 × 锈红 结构保真  0.977
+  ✓ brick-64x32 × 铸铁灰 结构保真  0.985
+  ✓ brick-64x32 × 搪瓷蓝 结构保真  0.973
+  ✓ brick-64x32 × 水磨石米 结构保真  0.971
+  ✓ brick-64x32 × 警示黄 结构保真  0.979
+  ✓ brick-64x32 × 铜绿 结构保真  0.997
+  ✓ railing-24x60 × 锈红 结构保真  0.967
+  ✓ railing-24x60 × 铸铁灰 结构保真  0.977
+  ✓ railing-24x60 × 搪瓷蓝 结构保真  0.971
+  ✓ railing-24x60 × 水磨石米 结构保真  0.983
+  ✓ railing-24x60 × 警示黄 结构保真  0.983
+  ✓ railing-24x60 × 铜绿 结构保真  0.979
+  ✓ louver-40x20 × 锈红 结构保真  0.977
+  ✓ louver-40x20 × 铸铁灰 结构保真  0.985
+  ✓ louver-40x20 × 搪瓷蓝 结构保真  0.974
+  ✓ louver-40x20 × 水磨石米 结构保真  0.972
+  ✓ louver-40x20 × 警示黄 结构保真  0.981
+  ✓ louver-40x20 × 铜绿 结构保真  0.993
+  ✓ 色板数量 = 6  6
+  ✓ 色板色值全部合法
+
+[6] 可复现：两次跑同一张图，字节一致
+  ✓ lattice-48 sha256 一致  8526c703f46d6989…
+  ✓ brick-64x32 sha256 一致  964a1cd1a7d85a9e…
+  ✓ railing-24x60 sha256 一致  805846f0e2a498b4…
+  ✓ louver-40x20 sha256 一致  9148e96636bdadef…
+
+[7] 规格书：字段齐、数值可核
+  ✓ 规格书 7 个顶层字段  unit,period,confidence,symmetry,seamRemoved,colors,paths
+  ✓ 单元尺寸与周期一致
+  ✓ 色值为 HEX
+
+──────────────  86 passed, 0 failed  ──────────────

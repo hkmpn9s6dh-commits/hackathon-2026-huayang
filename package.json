@@ -1,0 +1,20 @@
+{
+  "name": "huayang",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "《花样》Pattern Mill — 工业遗产构件的纹样提取—规范化—无缝再生—产品化工具链",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview --port 4173",
+    "samples": "node scripts/make-samples.mjs",
+    "verify": "node scripts/verify.mjs",
+    "e2e": "node scripts/e2e.mjs"
+  },
+  "devDependencies": {
+    "playwright": "^1.65.1",
+    "typescript": "^5.6.3",
+    "vite": "^5.4.10"
+  }
+}
